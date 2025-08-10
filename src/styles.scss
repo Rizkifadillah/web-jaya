@@ -1,0 +1,382 @@
+// Custom styles for Workforce Agency - Yayasan Jayatama
+@import '../node_modules/bootstrap/scss/bootstrap';
+
+// Custom variables - Black and Red Theme
+$primary-color: #dc3545; // Red
+$secondary-color: #343a40; // Dark Gray/Black
+$dark-color: #000000; // Pure Black
+$light-color: #f8f9fa;
+
+// Override Bootstrap colors
+$theme-colors: (
+  "primary": $primary-color,
+  "secondary": $secondary-color,
+  "dark": $dark-color,
+  "danger": $primary-color
+);
+
+// Hero Section
+.hero-section {
+  height: 100vh;
+  background: linear-gradient(135deg, rgba(220, 53, 69, 0.9), rgba(0, 0, 0, 0.8)),
+              url('https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg') center/cover;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+}
+
+.hero-buttons {
+  margin-top: 2rem;
+}
+
+// Page Header for individual pages
+.page-header {
+  padding: 120px 0 80px 0;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.9), rgba(220, 53, 69, 0.8));
+}
+
+// Service Cards
+.service-card {
+  transition: all 0.3s ease;
+  border: 1px solid #e9ecef;
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(220, 53, 69, 0.2) !important;
+  }
+}
+
+.service-image {
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover .service-image {
+  transform: scale(1.05);
+}
+
+// Stats Section
+.stat-item {
+  padding: 1rem;
+  
+  h2 {
+    margin-bottom: 0.5rem;
+  }
+}
+
+// Feature Cards
+.feature-card {
+  transition: all 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-3px);
+  }
+}
+
+.feature-icon {
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover .feature-icon {
+  transform: scale(1.1);
+}
+
+// Job Cards
+.job-card {
+  transition: all 0.3s ease;
+  
+  &:hover {
+    box-shadow: 0 5px 15px rgba(220, 53, 69, 0.1);
+    transform: translateY(-2px);
+  }
+}
+
+.job-header {
+  border-bottom: 1px solid #e9ecef;
+  padding-bottom: 1rem;
+}
+
+// Contact Section
+.contact-info {
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.contact-icon {
+  margin-bottom: 1rem;
+}
+
+// Contact Form
+.contact-form {
+  .form-control {
+    border-radius: 0.5rem;
+    border: 2px solid #e9ecef;
+    padding: 0.75rem 1rem;
+    
+    &:focus {
+      border-color: $primary-color;
+      box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
+    }
+  }
+  
+  .form-label {
+    color: #333;
+    margin-bottom: 0.5rem;
+  }
+}
+
+// Red theme contact form for homepage
+.bg-danger .contact-form {
+  .form-control {
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    
+    &::placeholder {
+      color: rgba(255, 255, 255, 0.8);
+    }
+    
+    &:focus {
+      background: rgba(255, 255, 255, 0.2);
+      border-color: rgba(255, 255, 255, 0.5);
+      color: white;
+      box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.25);
+    }
+  }
+  
+  select.form-control {
+    option {
+      color: #333;
+      background: white;
+    }
+  }
+}
+
+// Navigation
+.navbar-brand {
+  font-size: 1.5rem;
+}
+
+.navbar-nav .nav-link {
+  font-weight: 500;
+  margin: 0 0.5rem;
+  transition: color 0.3s ease;
+  
+  &:hover {
+    color: $primary-color !important;
+  }
+  
+  &.active {
+    color: $primary-color !important;
+  }
+}
+
+// About Section
+.about-image img {
+  border-radius: 1rem;
+}
+
+// Vision Mission Cards
+.vision-mission-card {
+  transition: all 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+}
+
+// Value Cards
+.value-card {
+  transition: all 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-3px);
+  }
+}
+
+.value-icon {
+  transition: transform 0.3s ease;
+}
+
+.value-card:hover .value-icon {
+  transform: scale(1.1);
+}
+
+// Achievement Cards
+.achievement-card {
+  transition: all 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+}
+
+// Benefit Cards
+.benefit-card {
+  transition: all 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-3px);
+  }
+}
+
+.benefit-icon {
+  transition: transform 0.3s ease;
+}
+
+.benefit-card:hover .benefit-icon {
+  transform: scale(1.1);
+}
+
+// Map Container
+.map-container {
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+// Office Hours
+.office-hours {
+  .hours-list {
+    font-size: 1.1rem;
+  }
+}
+
+// Social Links
+.social-links a {
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+  
+  &:hover {
+    color: $primary-color !important;
+  }
+}
+
+// Smooth scrolling
+html {
+  scroll-behavior: smooth;
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+  .hero-section {
+    height: 80vh;
+  }
+  
+  .page-header {
+    padding: 100px 0 60px 0;
+  }
+  
+  .display-4 {
+    font-size: 2rem;
+  }
+  
+  .display-3 {
+    font-size: 2.5rem;
+  }
+  
+  .hero-buttons {
+    .btn {
+      display: block;
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+  }
+  
+  .stat-item h2 {
+    font-size: 2.5rem;
+  }
+  
+  // Mobile navbar adjustments
+  .navbar-brand {
+    font-size: 1.2rem;
+  }
+  
+  .navbar-nav {
+    text-align: center;
+    
+    .nav-link {
+      margin: 0.5rem 0;
+    }
+  }
+}
+
+// Animation classes
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+// Custom button styles
+.btn-outline-light {
+  border-width: 2px;
+  font-weight: 600;
+  
+  &:hover {
+    background-color: white;
+    color: $primary-color;
+  }
+}
+
+.btn-danger {
+  background-color: $primary-color;
+  border-color: $primary-color;
+  
+  &:hover {
+    background-color: darken($primary-color, 10%);
+    border-color: darken($primary-color, 10%);
+  }
+}
+
+// Section spacing
+section {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+// Custom spacing for fixed navbar
+body {
+  padding-top: 76px;
+}
+
+// Badge styles
+.badge-danger {
+  background-color: $primary-color;
+}
+
+// Form styling improvements
+.contact-form-section {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+// Hover effects for cards
+.bg-light:hover {
+  background-color: #f1f3f4 !important;
+}
